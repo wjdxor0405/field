@@ -1,43 +1,8 @@
 #include <stdio.h>
 #include <iostream>
 #include <cmath>
-// using namespace std;
 
 #include "field.h"
-
-
-
-// template <class T1>
-// template <class T2>
-// Algebraic_num::Algebraic_num(Root root){
-//     degrees = 1;
-//     coeffs[0].num = 0;
-//     coeffs[0].den = 1;
-    
-//     coeffs[1].num = 1;
-//     coeffs[1].den = 1;
-    
-//     for (int i=2;i<MAXCOEFF;i++){
-//         coeffs[i].num = 0;
-//         coeffs[i].den = 1;
-//     }
-//     irr_num[1] = root.get_num();
-//     irr_type = Root_type;
-// }
-
-
-
-// Algebraic_num Root::operator+(int n){
-
-//     // get_num();
-
-//     Algebraic_num temp(get_num());
-
-//     // temp.set_coeff(n, 0);
-
-//     return temp;
-
-// }
 
 
 void Algebraic_num::sef_coeff(Frac coeff, int index){
