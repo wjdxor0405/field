@@ -7,12 +7,11 @@ Poly Poly::operator+(Poly p){
     p.degree=0;
     for(int i=0;i<MAX_DEG;i++){
         p.c[i] = p.c[i] + c[i];
-        // printf("%d ", p.c[i].num);
+
         if(p.c[i].num != 0){ 
             p.degree = i;
         }
     }
-    // printf("\n");
 
 
     return p;
@@ -37,27 +36,22 @@ Poly Poly::operator-(Poly p){
 
 Poly Poly::operator*(Poly P){
 
-    // printf("b1\n");
     Frac r[MAX_DEG];
-    //    printf("b2\n");
-    //    printf("degree : %d\n", degree);
-    //    printf("p.degree : %d\n", P.degree);
+
     for(int i=0;i<=degree;i++){
         for(int j=0;j<=P.degree;j++){
-            // printf("(%d, %d) \n",i,j);
+
             r[i+j] = r[i+j] + c[i] * P.c[j];
         }
     }
-    //    printf("b3");
     P.degree = 0;
-    //    printf("b4");
+
     for(int i=0;i<MAX_DEG;i++){
         P.c[i] = r[i];
         if(r[i].num !=0){
             P.degree = i;
         }
     }
-    //    printf("b5");
 
     return P;
 }
