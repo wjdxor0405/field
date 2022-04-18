@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "field.h": "c",
+        "cmath": "cpp",
+        "iostream": "cpp"
+    }
+}
