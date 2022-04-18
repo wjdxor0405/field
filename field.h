@@ -6,6 +6,7 @@
 #define MAXIRR 4
 
 // using namespace std;
+#define ROOT_TYPE 1
 
 
 //number Field 
@@ -16,10 +17,19 @@ class Field{
        ~Field();
 };
 
-class Number_field : Field{
-
+struct field_type{
+    int type;
+    void * next_type;
 };
 
+
+class Number_field : Field{
+    private:
+        Number_field();
+        ~Number_field();
+    public:
+        field_type type;
+};
 
 class ID{
 
