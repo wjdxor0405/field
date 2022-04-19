@@ -5,6 +5,14 @@
 #include "field.h"
 
 
+
+
+Number_field::Number_field(field_num input_num){
+    f_num.type = input_num.type;
+    f_num.frac_num = input_num.frac_num;
+}
+
+
 void Algebraic_num::sef_coeff(Frac coeff, int index){
 
     coeffs[0].num = coeff.num;

@@ -1,6 +1,8 @@
 #include <stdint.h>
 #include <stdlib.h> 
 #include "frac.h"
+#include "polynomial.h"
+
 // #include <iostream>
 #define MAXCOEFF 4
 #define MAXIRR 4
@@ -17,9 +19,9 @@ class Field{
        ~Field();
 };
 
-struct field_type{
+struct field_num{
     int type;
-    void * next_type;
+    Frac frac_num;
 };
 
 
@@ -28,7 +30,11 @@ class Number_field : Field{
         Number_field();
         ~Number_field();
     public:
-        field_type type;
+        field_num f_num;
+        // field_type type;
+        Poly poly;
+        Number_field(field_num field_num);
+        ~Number_field();
 };
 
 class ID{
