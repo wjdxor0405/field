@@ -34,6 +34,7 @@ class Number_field : Field{
         // field_type type;
         Poly poly;
         Number_field(field_num field_num);
+        Number_field(Poly min_poly);
         ~Number_field();
 };
 

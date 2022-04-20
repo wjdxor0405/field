@@ -13,6 +13,11 @@ Number_field::Number_field(field_num input_num){
 }
 
 
+Number_field::Number_field(Poly min_poly){
+    poly = min_poly;
+
+}
+
 void Algebraic_num::sef_coeff(Frac coeff, int index){
 
     coeffs[0].num = coeff.num;
