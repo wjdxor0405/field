@@ -16,6 +16,13 @@ Number_field::Number_field(field_num input_num){
 Number_field::Number_field(Poly min_poly){
     poly = min_poly;
 
+    if(min_poly.degree < 2){
+      //Q
+    } 
+    else if(min_poly.degree == 2){
+        //...
+    }
+
 }
 
 void Algebraic_num::sef_coeff(Frac coeff, int index){
