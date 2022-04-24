@@ -18,9 +18,14 @@ Number_field::Number_field(Poly min_poly){
 
     if(min_poly.degree < 2){
       //Q
+      f_num.type = RATIONAL;
+      f_num.frac_num.den = 1;
+      f_num.frac_num.num = 1;
     } 
     else if(min_poly.degree == 2){
         //...
+        f_num.type = ROOT_TYPE;
+        //Poly(1,2) - Poly(1 ,Frac(1,2a))
     }
 
 }

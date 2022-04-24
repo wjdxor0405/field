@@ -8,6 +8,7 @@
 #define MAXIRR 4
 
 // using namespace std;
+#define RATIONAL 0
 #define ROOT_TYPE 1
 
 
