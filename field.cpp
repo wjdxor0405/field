@@ -10,6 +10,10 @@
 Number_field::Number_field(field_num input_num){
     f_num.type = input_num.type;
     f_num.frac_num = input_num.frac_num;
+
+    if(f_num.type == ROOT_TYPE){
+        poly = Poly(2,1) - Poly(f_num.frac_num);
+    }
 }
 
 
