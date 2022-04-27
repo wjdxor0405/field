@@ -12,13 +12,8 @@ Frac::Frac(int n, unsigned int d){
         m = (-1)*n;
     }
 
-    // printf("-----------------gcd(%d,%d)\n", m,d);
     int g = gcd(m,d);
-    //  printf("-----------------gcd(%d,%d)=", m,d);
-    // printf("g : %d\n", g);
-    // printf("n : %d\n", n);
-    // printf("m : %d\n", m);
-    // printf("d : %d\n", d);
+
 
     if (g == 0){
         num = n;
