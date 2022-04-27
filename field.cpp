@@ -13,6 +13,8 @@ Number_field::Number_field(field_num input_num){
 
     if(f_num.type == ROOT_TYPE){
         poly = Poly(2,1) - Poly(f_num.frac_num);
+    }else if(f_num.type == RATIONAL){
+        poly = Poly(1,1) - Poly(1);
     }
 }
 
