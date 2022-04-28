@@ -10,6 +10,7 @@
 // using namespace std;
 #define RATIONAL 0
 #define ROOT_TYPE 1
+#define TRI 2 //trigonometry
 
 
 //number Field 
@@ -37,6 +38,7 @@ class Number_field : Field{
         Number_field(field_num field_num);
         Number_field(Poly min_poly);
         ~Number_field();
+        void print_info();
 };
 
 class ID{

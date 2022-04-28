@@ -42,6 +42,23 @@ Number_field::Number_field(Poly min_poly){
 
 }
 
+void Number_field::print_info(){
+
+    if(f_num.type == ROOT_TYPE){
+        printf("root(");    
+
+    }
+    if(f_num.frac_num.den == 1){
+            printf("%d", f_num.frac_num.num);
+        }
+        else{
+            printf("(%d/%d)", f_num.frac_num.num, f_num.frac_num.den);
+        }
+    printf(")\n");
+    poly.val();
+
+}
+
 void Algebraic_num::sef_coeff(Frac coeff, int index){
 
     coeffs[0].num = coeff.num;
