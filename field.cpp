@@ -10,6 +10,7 @@
 //field_num : struct -> class 
 //
 Number_field::Number_field(field_num input_num){
+    
     f_num.type = input_num.type;
     f_num.frac_num = input_num.frac_num;
 
