@@ -21,9 +21,17 @@ class Field{
        ~Field();
 };
 
-struct field_num{
+// struct field_num{
+//     int type;
+//     Frac frac_num;
+// };
+
+class field_num{
     int type;
     Frac frac_num;
+    field_num();
+    ~field_num();
+
 };
 
 
