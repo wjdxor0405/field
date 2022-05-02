@@ -21,16 +21,13 @@ class Field{
        ~Field();
 };
 
-// struct field_num{
-//     int type;
-//     Frac frac_num;
-// };
-
 class field_num{
-    int type;
-    Frac frac_num;
-    field_num();
-    ~field_num();
+    public:
+        int type;
+        Frac frac_num;
+        field_num();
+        field_num(Frac frac, int type_);
+        ~field_num();
 
 };
 
@@ -43,6 +40,7 @@ class Number_field : Field{
         field_num f_num;
         // field_type type;
         Poly poly;
+        // Number_field(field_num input_num){
         Number_field(field_num field_num);
         Number_field(Poly min_poly);
         ~Number_field();

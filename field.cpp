@@ -8,17 +8,11 @@
 
 //need to change:
 //field_num : struct -> class 
-//
-Number_field::Number_field(field_num input_num){
-    
-    f_num.type = input_num.type;
-    f_num.frac_num = input_num.frac_num;
 
-    if(f_num.type == ROOT_TYPE){
-        poly = Poly(2,1) - Poly(f_num.frac_num);
-    }else if(f_num.type == RATIONAL){
-        poly = Poly(1,1) - Poly(1);
-    }
+field_num::field_num(Frac frac, int type_){
+
+    frac_num = frac;
+    type = type_;
 }
 
 
