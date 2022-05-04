@@ -16,7 +16,8 @@ int main(){
     P3.val();
     P4.val();
     
-    // Number_field N;
+    Number_field N = Number_field(Poly(1,2) - Poly(2));
+    N.print_info();
 
 
     return 0;
