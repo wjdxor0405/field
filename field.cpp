@@ -5,9 +5,11 @@
 #include "field.h"
 
 
-
+Field::Field(){}
+Field::~Field(){}
 //need to change:
 //field_num : struct -> class 
+
 
 field_num::field_num(Frac frac, int type_){
 
@@ -15,6 +17,13 @@ field_num::field_num(Frac frac, int type_){
     type = type_;
 }
 
+field_num::field_num(){
+
+}
+
+field_num::~field_num(){
+
+}
 
 Number_field::Number_field(Poly min_poly){
     poly = min_poly;
@@ -32,13 +41,33 @@ Number_field::Number_field(Poly min_poly){
         Frac b = min_poly.c[1];
         Frac a = min_poly.c[2];
         // Frac two = Frac(2,1);
-        Poly poly_1 = Poly(1,2) - Poly(Frac(1,2)/a);
+        Poly poly_1 = Poly(1,1) - Poly(b*Frac(1,2)/a);
+        
+        // printf("min_ploly : ");
+        // min_poly.val();
+
+        
+        // printf("poly_1 : ");
+        // poly_1.val();
+
+
         Poly poly_q = min_poly % poly_1;
         f_num.frac_num = poly_q.c[0];
+        f_num.frac_num.num *= -1;
+
+        // printf("poly_q : ");
+        // poly_q.val();
+
+
     }
 
 }
+Number_field::Number_field(){
 
+}
+Number_field::~Number_field(){
+
+}
 void Number_field::print_info(){
 
     if(f_num.type == ROOT_TYPE){
