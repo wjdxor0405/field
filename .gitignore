@@ -1,0 +1,10 @@
+# : comments
+
+# no .a files
+*.a
+
+# no .o files
+*.o
+
+# no .exe files
+*.exe
