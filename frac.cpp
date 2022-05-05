@@ -66,8 +66,6 @@ int Frac::gcd(int a, int b){
         a = b;
         b = t;
     }
-    // printf("a : %d, b: %d ", a, b);
-    
     
     // if(b==1){
     //     printf("b==1\n");
@@ -75,14 +73,12 @@ int Frac::gcd(int a, int b){
     // }
     // else 
     if(b==0){
-        // printf("b==0\n");
         return a;
     }
     if(a%b == 0){
         return b;   
     }
     else{
-        // printf("else");
         return gcd(a%b,b);
     }  
 }

@@ -7,8 +7,6 @@
 
 Field::Field(){}
 Field::~Field(){}
-//need to change:
-//field_num : struct -> class 
 
 
 field_num::field_num(Frac frac, int type_){
@@ -40,23 +38,12 @@ Number_field::Number_field(Poly min_poly){
         Frac c = min_poly.c[0];
         Frac b = min_poly.c[1];
         Frac a = min_poly.c[2];
-        // Frac two = Frac(2,1);
+
         Poly poly_1 = Poly(1,1) - Poly(b*Frac(1,2)/a);
         
-        // printf("min_ploly : ");
-        // min_poly.val();
-
-        
-        // printf("poly_1 : ");
-        // poly_1.val();
-
-
         Poly poly_q = min_poly % poly_1;
         f_num.frac_num = poly_q.c[0];
         f_num.frac_num.num *= -1;
-
-        // printf("poly_q : ");
-        // poly_q.val();
 
 
     }
@@ -100,10 +87,6 @@ void Algebraic_num::sef_coeff(int coeff, int index){
     
 }
 
-
-
-
-// template <class T>
 void Algebraic_num::val(){
     int i = 0;
     printf("(%d/%d)", coeffs[i].num, coeffs[i].den);
@@ -117,7 +100,6 @@ void Algebraic_num::val(){
     }
     
 
-  
     printf("\n");
 }
 
