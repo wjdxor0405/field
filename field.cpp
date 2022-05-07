@@ -47,6 +47,9 @@ Number_field::Number_field(Poly min_poly){
 
 
     }
+    else if(min_poly.degree == 3){
+        //TODO
+    }
 
 }
 Number_field::Number_field(){
