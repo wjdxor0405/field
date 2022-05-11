@@ -65,12 +65,30 @@ void Number_field::print_info(){
 
     }
     if(f_num.frac_num.den == 1){
-            printf("%d", f_num.frac_num.num);
+
+        if(f_num.frac_num.num < 0){
+            printf("%d", (-1)*f_num.frac_num.num);
         }
         else{
-            printf("(%d/%d)", f_num.frac_num.num, f_num.frac_num.den);
+            printf("%d", f_num.frac_num.num);
         }
-    printf(")\n");
+    }
+    else{
+        if(f_num.frac_num.num < 0){
+            printf("(%d/%d)", (-1)*f_num.frac_num.num, f_num.frac_num.den);
+        }
+        else{
+          printf("(%d/%d)", f_num.frac_num.num, f_num.frac_num.den);
+        }
+
+    }
+
+    if(f_num.frac_num.num < 0){
+        printf(")i\n");
+    }
+    else{
+        printf(")\n");
+    }
     poly.val();
 
 }
