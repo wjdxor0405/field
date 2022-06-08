@@ -49,6 +49,18 @@ Number_field::Number_field(Poly min_poly){
     }
     else if(min_poly.degree == 3){
         //TODO
+        Frac d = min_poly.c[0];
+        Frac c = min_poly.c[1];
+        Frac b = min_poly.c[2];
+        Frac a = min_poly.c[3];
+        
+        Poly poly_1 = Poly(1,1) - Poly(b*Frac(1,3)/a);
+
+        Poly poly_q = min_poly % poly_1;
+        print_info();
+        // f_num.frac_num = poly_q.c[0];
+        // f_num.frac_num.num *= -1;
+
     }
 
 }
