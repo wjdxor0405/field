@@ -23,7 +23,7 @@ constant term $2$ in the polynomial.
 
 Polynomial operations like addtion, substitution, multiplication and division are available.
 
-Polynomial modulo operator also available. Auto-modulo calculation is provided to support 
+Polynomial modulo operatoration is also available. Auto-modulo calculation is provided to support 
 [minial polynomial](https://en.wikipedia.org/wiki/Minimal_polynomial_(field_theory))
 .
 
