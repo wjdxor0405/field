@@ -6,7 +6,7 @@ This project is tried to implement
 [Algebraic number field](https://en.wikipedia.org/wiki/Algebraic_number_field)
 
 For example, $x^2 - 2$
-has to solutions
+has two solutions
 $\sqrt{2}$ 
  and 
 $-\sqrt{2}$.
