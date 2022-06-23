@@ -1,6 +1,6 @@
 # field
 
-This project is tried to implement 
+This project tried to implement 
 [field](https://en.wikipedia.org/wiki/Field_(mathematics))
 , especially, 
 [Algebraic number field](https://en.wikipedia.org/wiki/Algebraic_number_field)
