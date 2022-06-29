@@ -57,11 +57,12 @@ Number_field::Number_field(Poly min_poly){
         Poly poly_1 = Poly(1,1) - Poly(b*Frac(1,3)/a);
 
         Poly poly_q = min_poly % poly_1;
-        print_info();
+        // print_info();
         // f_num.frac_num = poly_q.c[0];
         // f_num.frac_num.num *= -1;
 
     }
+    cal_discriminant();
 
 }
 Number_field::Number_field(){
@@ -73,8 +74,7 @@ Number_field::~Number_field(){
 void Number_field::print_info(){
 
     if(f_num.type == ROOT_TYPE){
-        printf("field : Q(root(");    
-
+        printf("field : Q(root(");
     }
     if(f_num.frac_num.den == 1){
 
@@ -103,29 +103,28 @@ void Number_field::print_info(){
     }
     printf("minimal poly : ");
     poly.val();
+    printf("discriminant : %d\n", discriminant);
 
 }
 
 void Number_field::cal_discriminant(){
 
     if(f_num.type == ROOT_TYPE){
-        printf("field : Q(root(");    
+        if(f_num.frac_num.den == 1){
 
-    }
-    if(f_num.frac_num.den == 1){
+            //TODO : check square free
+            int d = f_num.frac_num.num;
+            if(d % 4 == 2 || d % 4 == 3){
+                discriminant = d;
+            }
+            else if(d % 4 == 1){
+                discriminant = 4*d;
+            }
+            else{
+                //TODO
+            }
 
-        //TODO : check square free
-        int d = f_num.frac_num.num;
-        if(d % 4 == 2 || d % 4 == 3){
-            discriminant = d;
         }
-        else if(d % 4 == 1){
-            discriminant = 4*d;
-        }
-        else{
-            //TODO
-        }
-
     }
 
 }
