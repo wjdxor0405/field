@@ -73,7 +73,7 @@ Number_field::~Number_field(){
 void Number_field::print_info(){
 
     if(f_num.type == ROOT_TYPE){
-        printf("root(");    
+        printf("field : Q(root(");    
 
     }
     if(f_num.frac_num.den == 1){
@@ -99,11 +99,39 @@ void Number_field::print_info(){
         printf(")i\n");
     }
     else{
-        printf(")\n");
+        printf("))\n");
     }
+    printf("minimal poly : ");
     poly.val();
 
 }
+
+void Number_field::cal_discriminant(){
+
+    if(f_num.type == ROOT_TYPE){
+        printf("field : Q(root(");    
+
+    }
+    if(f_num.frac_num.den == 1){
+
+        //TODO : check square free
+        int d = f_num.frac_num.num;
+        if(d % 4 == 2 || d % 4 == 3){
+            discriminant = d;
+        }
+        else if(d % 4 == 1){
+            discriminant = 4*d;
+        }
+        else{
+            //TODO
+        }
+
+    }
+
+}
+
+
+
 
 void Algebraic_num::sef_coeff(Frac coeff, int index){
 

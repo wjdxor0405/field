@@ -36,6 +36,8 @@ class Number_field : Field{
     private:
         // Number_field();
         // ~Number_field();
+        int discriminant;
+        // int 
     public:
         field_num f_num;
         // field_type type;
@@ -46,6 +48,8 @@ class Number_field : Field{
         Number_field();
         ~Number_field();
         void print_info();
+
+        void cal_discriminant();
 };
 
 class ID{
