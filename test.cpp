@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "field.h"
+// #include "field.h"
 #include "polynomial.h"
-
+#include "number_field.h"
 
 int main(){
 
@@ -18,6 +18,8 @@ int main(){
     
     Number_field N = Number_field(Poly(1,2) - Poly(2));
     N.print_info();
+
+    printf("testaa\n");
 
 
     return 0;
